@@ -1,6 +1,6 @@
 :root {
     --primary-white: rgb(245, 245, 247);
-    --primary-link: rgb(0, 102, 204);
+    --primary-link: rgb(41,151,255);
     --primary-text-color: rgb(29, 29, 31);
     --dark-grey: rgb(110, 110, 115);
     --light-grey: rgb(162, 162, 166);
@@ -10,9 +10,13 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+body{
     color: var(--primary-text-color);
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "SanFranciscoText-Regular","SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow-x: hidden;
+    letter-spacing: -.022em;
 }
 
 p {
@@ -29,12 +33,22 @@ a {
 }
 
 .two_links {
-    margin-top: 15px;
+    margin-top: 12px;
     text-align: center;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .two_links a {
     text-decoration: none;
+}
+
+.two_links :nth-child(2) {
+    margin-left: 27px;
+}
+
+.two_links a:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 735px) {
@@ -49,26 +63,38 @@ a {
     }
 }
 
-.two_links :nth-child(2) {
-    margin-left: 27px;
-}
-
 /* Navbar styles */
 
-nav {
+.main-nav{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 44px;
-    background-color: rgba(27, 26, 26, 0.8);
-    display: flex;
-    gap: 30px;
+    height: 48px;
+    background-color: rgba(22, 22, 23, .8);
     backdrop-filter: blur(8px);
     z-index: 3;
 }
 
+.main-nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main-nav ul li{
+    display: none;
+}
+
 .icon {
     fill: rgba(255, 255, 255, .8);
+    cursor: pointer;
+}
+
+.icon:hover {
+    fill: rgb(255, 255, 255);
 }
 
 .nav_logo {
@@ -84,28 +110,44 @@ nav {
 .cart,
 .hamburguer,
 .nav_logo {
-    overflow: hidden;
+    /* min-width: 17px; */
 }
 
-nav a {
+
+.main-nav a {
     display: none;
 }
 
 @media (min-width: 834px) {
+    .main-nav{
+        height: 44px;
+    }
+
     .hamburguer {
         display: none;
     }
 
-    nav a {
+    .main-nav ul li{
         display: flex;
-        align-items: center;
-        color: rgba(206, 206, 206, 0.8);
-        font-size: 12px;
     }
 
-    nav {
-        justify-content: center;
-        gap: 2.6%;
+    .main-nav ul{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1020px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .main-nav ul a {
+        display: inline-block;
+        color: rgba(232, 232, 232, 0.8);
+        font-size: 11.5px;
+        font-weight: 400;
+    }
+
+    .main-nav ul a:hover {
+        color: rgb(232, 232, 232);
     }
 
     .nav_logo {
@@ -113,10 +155,10 @@ nav a {
         margin: 0;
     }
 
-    .nav_logo svg,
-    .nav_search svg,
-    .cart svg {
-        height: 44px;
+    .nav_logo,
+    .nav_search,
+    .cart {
+        width: 14px;
     }
 
     .nav_search,
@@ -132,7 +174,7 @@ nav a {
 
 /* Section announcement styles */
 .announcement {
-    margin-top: 44px;
+    margin-top: 48px;
 }
 
 .announcement p {
@@ -140,11 +182,18 @@ nav a {
     text-align: center;
     max-width: 375px;
     margin: 0 auto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.47059;
 }
 
 .announcement sup {
     color: var(--primary-link);
     font-size: 9px;
+}
+
+.announcement a:hover {
+    text-decoration: underline;
 }
 
 
@@ -157,6 +206,7 @@ nav a {
 
 /* Section Hero styles */
 .hero {
+    cursor: pointer;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -232,10 +282,29 @@ nav a {
     }
 }
 
+@media (min-width: 1069px){
+    .hero {
+        height: 692px;
+    }
+
+    .hero #background-video {
+        height: 692px;
+    }
+}
+
 /* Section iPhone14 Black & White styles */
 
+.iphone14{
+    cursor: pointer;
+    height: 500px;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    margin-bottom: 10px;
+}
+
 .iphone14 h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 600;
     padding-top: 40px;
     text-align: center;
@@ -244,32 +313,19 @@ nav a {
 .iphone14 h3 {
     font-size: 19px;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 4px;
     text-align: center;
 }
 
 .iphone14_black {
     background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14-pro/hero_iphone14pro_spring__9xo85pm6sbmm_small_2x.jpg);
-    height: 600px;
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 40%;
 }
 
 .iphone14_white {
     background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14/hero_iphone14_yellow__eun20sn4imi6_small_2x.jpg);
-    height: 600px;
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    margin-bottom: 10px;
 }
 
 @media (min-width: 735px) {
-    .iphone14_black, .iphone14_white {
-        background-size: stretch;
-    }
-
     .iphone14 h2 {
         font-size: 48px;
     }
@@ -277,15 +333,33 @@ nav a {
     .iphone14 h3 {
         font-size: 24px;
     }
+
+    .iphone14_black {
+        background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14-pro/hero_iphone14pro_spring__9xo85pm6sbmm_mediumtall_2x.jpg);
+    }
+    .iphone14_white {
+        background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14/hero_iphone14_yellow__eun20sn4imi6_mediumtall_2x.jpg);
+    }
 }
 
 @media (min-width: 1069px) {
+    .iphone14{
+        height: 692px;
+    }
+
     .iphone14 h2 {
         font-size: 56px;
     }
 
     .iphone14 h3 {
         font-size: 28px;
+    }
+
+    .iphone14_black {
+        background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14-pro/hero_iphone14pro_spring__9xo85pm6sbmm_large_2x.jpg);
+    }
+    .iphone14_white {
+        background-image: url(https://www.apple.com/v/home/ba/images/heroes/iphone-14/hero_iphone14_yellow__eun20sn4imi6_large_2x.jpg);
     }
 }
 
@@ -308,6 +382,7 @@ nav a {
 /* Cards style */
 
 .card {
+    cursor: pointer;
     background-size: 734px 548px;
     background-position-x: 50%;
     background-position-y: 20%;
@@ -338,6 +413,10 @@ nav a {
     font-weight: 400;
 }
 
+.gallery .card a:hover {
+    text-decoration: underline;
+}
+
 /* Card1 style */
 
 .card1 {
@@ -348,6 +427,17 @@ nav a {
     .card {
         width: calc(50% - 15px);
         margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 1069px) {
+    .card img {
+        padding-top: 80px;
+    }
+
+    .card {
+        background-size: cover;
+        height: 580px;
     }
 }
 
@@ -633,6 +723,7 @@ footer ul li a {
 
 .last_footer a {
     color: var(--primary-link);
+    text-decoration: underline;
 }
 
 .last_footer ul li.last {
@@ -683,18 +774,28 @@ footer ul li a {
         backdrop-filter: none;
     }
 
+    .secondary_footer_nav div{
+        display: flex;
+        flex-direction: column;
+    }
+
     .secondary_footer_nav a.main_menu {
+        cursor: text;
         font-size: 12px;
         font-weight: 600;
-        color: var(--dark-grey);
-        margin-top: 15px;
+        color: rgb(67, 67, 67);
+        padding-top: 15px;
         margin-bottom: 10px;
     }
 
     .secondary_footer_nav a.secondary_sub_menu {
-        color: var(--light-grey);
+        color: rgb(67, 67, 67);
         font-size: 12px;
         font-weight: 300;
         line-height: 25px;
+    }
+
+    .secondary_footer_nav a.secondary_sub_menu:hover {
+        text-decoration: underline;
     }
 }
