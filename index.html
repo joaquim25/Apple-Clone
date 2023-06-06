@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,72 +6,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Apple Clone</title>
+    <title>Apple Clone (BEM)</title>
 </head>
 
 <body>
+
     <!-- Navbar -->
-    <nav class="main-nav">
-        <ul>
-            <svg class="nav_logo icon" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+    <nav class="navbar">
+        <ul class="navbar__flex">
+            <svg class="navbar__icon navbar__icon--logo" viewBox="0 0 17 48" width="30"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z">
                 </path>
             </svg>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Mac</a></li>
-            <li><a href="#">iPad</a></li>
-            <li><a href="#">iPhone</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">AirPods</a></li>
-            <li><a href="#">TV & Home</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Support</a></li>
-            <svg class="nav_search icon" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Store</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Mac</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">iPad</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">iPhone</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Watch</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Vision</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">AirPods</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">TV & Home</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Entertainment</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Accessories</a></li>
+            <li class="navbar__desktop__item"><a href="#" class="navbar__desktop__link">Support</a></li>
+            <svg class="navbar__icon" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z">
                 </path>
             </svg>
-            <svg class="cart icon" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+            <svg class="navbar__icon" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z">
                 </path>
             </svg>
-            <div class="hamburguer">
-                <svg class="icon" width="17" viewBox="2 -14 17 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12L20 12" stroke="rgba(255, 255, 255, .8)" stroke-width="2" stroke-linecap="round" />
-                    <path d="M4 6L20 6" stroke="rgba(255, 255, 255, .8)" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </div>
+            <input type="checkbox" id="hamb__button">
+            <label for="hamb__button">
+                <div class="navbar__icon navbar__icon--hamburguer">
+                    <svg class="icon" width="17" viewBox="2 -14 17 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12L20 12" stroke="rgba(255, 255, 255, .8)" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M4 6L20 6" stroke="rgba(255, 255, 255, .8)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </label>
+
+            <!-- Hamburguer menu expanded -->
+            <section class="hamb__menu">
+                <div class="container">
+                    <input type="checkbox" id="hamb__button">
+                    <label class="hamb__menu__label" for="hamb__button">
+                        <svg class="hamb__menu__close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </label>
+                    <ul class="hamb__menu__list">
+                        <li class="hamb__menu__item">Store
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Mac
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">iPad
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">iPhone
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Watch
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Vision
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">AirPods
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">TV & Home
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Entertainment
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Accessories
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="hamb__menu__item">Support
+                            <svg class="hamb__menu__item__svg" height="25" viewBox="0 11 9 25" width="9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z">
+                                </path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </ul>
     </nav>
+    <!-- End Hamburguer menu expanded -->
+
     <!-- End Navbar -->
 
     <main>
-        <!-- Section announcement -->
+        <!-- Section Announcement -->
         <section class="announcement">
-            <p>Get $200&ndash;$630 in credit toward iPhone&nbsp;14 or&nbsp;iPhone&nbsp;14&nbsp;Pro when you trade in
+            <p class="announcement__text">Get $200&ndash;$630 in credit toward iPhone&nbsp;14
+                or&nbsp;iPhone&nbsp;14&nbsp;Pro when you trade in
                 iPhone&nbsp;11 or&nbsp;higher. <sup>1 </sup><a href="#">Shop iPhone ></a></p>
         </section>
-        <!-- End Section annoucement -->
+        <!-- Section Announcement -->
 
         <!-- Section Hero -->
         <section class="hero">
-            <div class="hero_logo">
-                <img src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/logo_appletv_plus__e3ngpm9nmqaa_medium_2x.png"
+            <div class="hero__logo">
+                <img class="hero__logo__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/logo_appletv_plus__e3ngpm9nmqaa_medium_2x.png"
                     alt="apple_logo">
             </div>
-            <div class="title">
-                <img src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/prehistoric_logo__fl20686161ei_small_2x.png"
+            <div class="hero__title">
+                <img class="hero__title__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/prehistoric_logo__fl20686161ei_small_2x.png"
                     alt="prehistoric planet 2">
             </div>
-            <div class="descr">
-                <img src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/tagline__etzlezd3ocgi_small_2x.png"
+            <div class="hero__description">
+                <img class="hero__description__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/tv-plus-prehistoric-planet/tagline__etzlezd3ocgi_small_2x.png"
                     alt="prehistoric planet 2 description">
             </div>
-            <div class="hero_button">
-                <a href="#" class="button_cta">Stream now</a>
+            <div class="hero__button">
+                <a class="hero__button__link" href="#">Stream now</a>
                 <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" viewBox="0 0 408.221 408.221"
                     xml:space="preserve">
@@ -83,7 +200,7 @@
                     </g>
                 </svg>
             </div>
-            <video id="background-video" autoplay loop muted>
+            <video class="hero__background__video" autoplay loop muted>
                 <source
                     src="https://www.apple.com/105/media/us/homepage/2023/c63f7293-e3ef-451e-97c7-a5873509cd6f/anim/hero/large_2x.mp4"
                     type="video/mp4">
@@ -92,10 +209,10 @@
         <!-- End Section Hero -->
 
         <!-- Section iPhone14_Black -->
-        <section class="iphone14 iphone14_black">
-            <h2 class="text_white">iPhone 14 Pro</h2>
-            <h3 class="text_white">Pro.Beyond</h3>
-            <div class="two_links">
+        <section class="iphone14 iphone14--black">
+            <h2 class="iphone14__head iphone14__head--white">iPhone 14 Pro</h2>
+            <h3 class="iphone14__subHead iphone14__subHead--white">Pro.Beyond</h3>
+            <div class="two__links">
                 <a href="#">Learn more ></a>
                 <a href="#">Buy ></a>
             </div>
@@ -103,10 +220,10 @@
         <!-- End Section iPhone14_Black -->
 
         <!-- Section iPhone14_White -->
-        <section class="iphone14 iphone14_white">
-            <h2>iPhone 14</h2>
-            <h3>Wonderfull.</h3>
-            <div class="two_links">
+        <section class="iphone14 iphone14--white">
+            <h2 class="iphone14__head">iPhone 14</h2>
+            <h3 class="iphone14__subHead">Wonderfull.</h3>
+            <div class="two__links">
                 <a href="#">Learn more ></a>
                 <a href="#">Buy ></a>
             </div>
@@ -115,60 +232,79 @@
 
         <!-- Gallery Section -->
         <section class="gallery">
-            <div class="card card1 text-top">
-                <img src="https://www.apple.com/v/home/ba/images/logos/iphone-tradein/logo_tradein__d1fpktgipvki_small_2x.png"
+
+            <!-- Card1 -->
+            <div class="gallery__card gallery__card--card1">
+                <img class="gallery__card__img gallery__card__img--card1"
+                    src="https://www.apple.com/v/home/ba/images/logos/iphone-tradein/logo_tradein__d1fpktgipvki_small_2x.png"
                     alt="Trade In">
-                <h4>Upgrade and save. It's that easy</h4>
-                <a href="#">See what your device is worth ></a>
+                <h4 class="gallery__card__head gallery__card__head--card1">Upgrade and save. It's that easy</h4>
+                <a class="gallery__card__link" href="#">See what your device is worth ></a>
             </div>
-            <div class="card card2">
-                <img src="https://www.apple.com/v/home/ba/images/logos/wwdc23-announce/promo_logo_wwdc23__gcsmmrgbhlme_small_2x.png"
+
+            <!-- Card2 -->
+            <div class="gallery__card gallery__card--card2">
+                <img class="gallery__card__img gallery__card--card2__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/wwdc23-announce/promo_logo_wwdc23__gcsmmrgbhlme_small_2x.png"
                     alt="WWDC23">
-                <h4>Apple Worldwide Developers Conference. Join us online June 5-9</h4>
-                <a href="#">Learn more ></a>
+                <h4 class="gallery__card__head gallery__card--card2__head">Apple Worldwide Developers Conference. Join
+                    us online June 5-9</h4>
+                <a class="gallery__card__link gallery__card--card2__link" href="#">Learn more ></a>
             </div>
-            <div class="card card3">
-                <img src="https://www.apple.com/v/home/ba/images/logos/apple-watch-pride/logo_promo_pride23__cnampkeybsty_small_2x.png"
+
+            <!-- Card3 -->
+            <div class="gallery__card gallery__card--card3">
+                <img class="gallery__card__img gallery__card--card3__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/apple-watch-pride/logo_promo_pride23__cnampkeybsty_small_2x.png"
                     alt="Apple Watch">
-                <h4>Pride is in the air.</h4>
-                <a href="#">Shop the new Pride Edition Sport Brand ></a>
+                <h4 class="gallery__card__head gallery__card__head--card3">Pride is in the air.</h4>
+                <a class="gallery__card__link gallery__card--card3__link" href="#">Shop the new Pride Edition Sport
+                    Brand ></a>
             </div>
-            <div class="card card4">
-                <h4>iPad Pro</h4>
-                <div class="subhead_img">
-                    <h5>Supercharged by</h5>
-                    <img src="https://www.apple.com/v/home/ba/images/logos/ipad-pro/promo_m2_chip__enw2kz91lsuq_small_2x.png"
+
+            <!-- Card4 -->
+            <div class="gallery__card gallery__card--card4">
+                <h4 class="gallery__card__head gallery__card--card4__head">iPad Pro</h4>
+                <div class="gallery__card--card4__subHead">
+                    <h5 class="gallery__card__subHead gallery__card--card4__subHead--title">Supercharged by</h5>
+                    <img class="gallery__card--card4__subHead--img"
+                        src="https://www.apple.com/v/home/ba/images/logos/ipad-pro/promo_m2_chip__enw2kz91lsuq_small_2x.png"
                         alt="M2">
                 </div>
-                <div class="two_links">
+                <div class="two__links">
                     <a href="#">Learn more ></a>
                     <a href="#">Buy ></a>
                 </div>
             </div>
-            <div class="card card5">
-                <h4 class="text_white">Your health data.<br>In your control.</h4>
-                <h5 class="text_white">Privacy. That's iPhone.</h5>
-                <a href="#">Learn more ></a>
+
+            <!-- Card5 -->
+            <div class="gallery__card gallery__card--card5">
+                <h4 class="gallery__card__head gallery__card--card5__head">Your health data.<br>In your control.</h4>
+                <h5 class="gallery__card__subHead gallery__card--card5__subHead">Privacy. That's iPhone.</h5>
+                <a class="gallery__card__link" href="#">Learn more ></a>
             </div>
-            <div class="card card6">
-                <img src="https://www.apple.com/v/home/ba/images/logos/apple-card/logo__dcojfwkzna2q_small_2x.png"
+
+            <!-- Card6 -->
+            <div class="gallery__card gallery__card--card6">
+                <img class="gallery__card__img gallery__card--card6__img"
+                    src="https://www.apple.com/v/home/ba/images/logos/apple-card/logo__dcojfwkzna2q_small_2x.png"
                     alt="Apple Card">
-                <h5>Get up to 3% Daily Cash back<br>with every purchase</h5>
-                <div class="two_links">
+                <h5 class="gallery__card__head gallery__card--card6__head">Get up to 3% Daily Cash back<br>with every
+                    purchase</h5>
+                <div class="two__links">
                     <a href="#">Learn more ></a>
                     <a href="#">Apply now ></a>
                 </div>
             </div>
         </section>
         <!-- End Gallery Section -->
-
     </main>
 
     <!-- Footer -->
-    <footer>
-        <section class="legal_text">
+    <footer class="footer">
+        <section class="footer__text">
             <ul>
-                <li>
+                <li class="footer__item">
                     1. Trade-in values will vary based on the condition, year, and configuration of your eligible
                     trade-in device. Not all devices are eligible for credit. You must be at least 18 years old to be
                     eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward
@@ -181,347 +317,350 @@
                     trade-in transaction for any reason. More details are available from Apple’s trade-in partner for
                     trade-in and recycling of eligible devices. Restrictions and limitations may apply.
                 </li>
-                <li>
+                <li class="footer__item">
                     A subscription is required for Apple TV+.
                 </li>
-                <li>
+                <li class="footer__item">
                     To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or
                     iPad with the latest version of iOS or iPadOS. Update to the latest version by going to Settings >
                     General > Software Update. Tap Download and Install.
                 </li>
-                <li>
+                <li class="footer__item">
                     Available for qualifying applicants in the United States.
                 </li>
-                <li>
+                <li class="footer__item">
                     Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.
                 </li>
-                <li>
-                    Learn more about how Apple Card applications are evaluated at <a
+                <li class="footer__item">
+                    Learn more about how Apple Card applications are evaluated at <a class="footer__link"
                         href="#">support.apple.com/kb/HT209218</a>.
                 </li>
             </ul>
         </section>
         <br>
 
-        <!-- Mobile Footer -->
-        <div class="footer_nav">
+        <!-- Mobile Footer Nav -->
+        <div class="mob__footer__nav">
             <div>
                 <input type="checkbox" id="dropdown1">
-                <label class="dropdown_nav" for="dropdown1">
-                    <span>Shop and Learn</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor">
+                <label class="mob__footer__nav__dropdown" for="dropdown1">
+                    <span class="mob__footer__nav__dropdown__text">Shop and Learn</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Store</a>
-                    <a href="#">Mac</a>
-                    <a href="#">iPad</a>
-                    <a href="#">iPhone</a>
-                    <a href="#">Watch</a>
-                    <a href="#">AirPods</a>
-                    <a href="#">TV & Home</a>
-                    <a href="#">AirTag</a>
-                    <a href="#">Accessories</a>
-                    <a href="#">Gift Cards</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Store</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Mac</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">iPad</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">iPhone</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Watch</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">AirPods</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">TV & Home</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">AirTag</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Accessories</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Gift Cards</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown2">
-                <label class="dropdown_nav" for="dropdown2">
-                    <span>Apple Wallet</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown2">
+                    <span class="mob__footer__nav__dropdown__text">Apple Wallet</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Wallet</a>
-                    <a href="#">Apple Card</a>
-                    <a href="#">Apple Pay</a>
-                    <a href="#">Apple Cash</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Wallet</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Card</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Pay</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Cash</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown3">
-                <label class="dropdown_nav" for="dropdown3">
-                    <span>Account</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown3">
+                    <span class="mob__footer__nav__dropdown__text">Account</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Manage Your Apple ID</a>
-                    <a href="#">Apple Store Account</a>
-                    <a href="#">iCloud.com</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Manage Your Apple ID</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Store Account</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">iCloud.com</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown4">
-                <label class="dropdown_nav" for="dropdown4">
-                    <span>Entertainment</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown4">
+                    <span class="mob__footer__nav__dropdown__text">Entertainment</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Apple One</a>
-                    <a href="#">Apple TV+</a>
-                    <a href="#">Apple Music</a>
-                    <a href="#">Apple Arcade</a>
-                    <a href="#">Apple Fitness+</a>
-                    <a href="#">Apple News+</a>
-                    <a href="#">Apple Podcasts</a>
-                    <a href="#">Apple Books</a>
-                    <a href="#">Apple Store</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple One</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple TV+</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Music</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Arcade</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Fitness+</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple News+</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Podcasts</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Books</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Store</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown5">
-                <label class="dropdown_nav" for="dropdown5">
-                    <span>Apple Store</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown5">
+                    <span class="mob__footer__nav__dropdown__text">Apple Store</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Find a Store</a>
-                    <a href="#">Genius Bar</a>
-                    <a href="#">Today at Apple</a>
-                    <a href="#">Apple Camp</a>
-                    <a href="#">Apple Store App</a>
-                    <a href="#">Certified Refurbished</a>
-                    <a href="#">Apple Trade In</a>
-                    <a href="#">Financing</a>
-                    <a href="#">Carrier Deals at Apple</a>
-                    <a href="#">Order Status</a>
-                    <a href="#">Shopping Help</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Find a Store</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Genius Bar</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Today at Apple</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Camp</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Store App</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Certified Refurbished</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Trade In</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Financing</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Carrier Deals at Apple</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Order Status</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shopping Help</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown6">
-                <label class="dropdown_nav" for="dropdown6">
-                    <span>For Business</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown6">
+                    <span class="mob__footer__nav__dropdown__text">For Business</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Apple and Business</a>
-                    <a href="#">Shop for Business</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple and Business</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shop for Business</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown7">
-                <label class="dropdown_nav" for="dropdown7">
-                    <span>For Education</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown7">
+                    <span class="mob__footer__nav__dropdown__text">For Education</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Apple and Education</a>
-                    <a href="#">Shop for K-12</a>
-                    <a href="#">Shop for College</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple and Education</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shop for K-12</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shop for College</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown8">
-                <label class="dropdown_nav" for="dropdown8">
-                    <span>For Healthcare</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown8">
+                    <span class="mob__footer__nav__dropdown__text">For Healthcare</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Apple in Healthcare</a>
-                    <a href="#">Health on Apple Watch</a>
-                    <a href="#">Health Records on iPhone</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple in Healthcare</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Health on Apple Watch</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Health Records on iPhone</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown9">
-                <label class="dropdown_nav" for="dropdown9">
-                    <span>For Government</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown9">
+                    <span class="mob__footer__nav__dropdown__text">For Government</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Shop for Government</a>
-                    <a href="#">Shop for Veterans and Military</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shop for Government</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Shop for Veterans and Military</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown10">
-                <label class="dropdown_nav" for="dropdown10">
-                    <span>Apple Values</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown10">
+                    <span class="mob__footer__nav__dropdown__text">Apple Values</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Accessibility</a>
-                    <a href="#">Education</a>
-                    <a href="#">Environment</a>
-                    <a href="#">Inclusion and Diversity</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Racial Equity and Justice</a>
-                    <a href="#">Supplier Responsibility</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Accessibility</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Education</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Environment</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Inclusion and Diversity</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Privacy</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Racial Equity and Justice</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Supplier Responsibility</a>
                 </div>
             </div>
 
             <div>
                 <input type="checkbox" id="dropdown11">
-                <label class="dropdown_nav" for="dropdown11">
-                    <span>About Apple</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                <label class="mob__footer__nav__dropdown" for="dropdown11">
+                    <span class="mob__footer__nav__dropdown__text">About Apple</span>
+                    <svg class="mob__footer__nav__dropdown__button" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </label>
-                <div class="sub_menu">
-                    <a href="#">Newsroom</a>
-                    <a href="#">Apple Leadership</a>
-                    <a href="#">Career Opportunities</a>
-                    <a href="#">Investors</a>
-                    <a href="#">Ethics & Compliance</a>
-                    <a href="#">Events</a>
-                    <a href="#">Contact Apple</a>
+                <div class="mob__footer__nav__sub-menu">
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Newsroom</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Apple Leadership</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Career Opportunities</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Investors</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Ethics & Compliance</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Events</a>
+                    <a class="mob__footer__nav__sub-menu__link" href="#">Contact Apple</a>
                 </div>
             </div>
             <hr>
         </div>
 
-        <!-- Desktop Footer -->
-        <nav class="secondary_footer_nav">
-            <div>
-                <a href="#" class="main_menu">Shop and Learn</a>
-                <a href="#" class="secondary_sub_menu">Store</a>
-                <a href="#" class="secondary_sub_menu">Mac</a>
-                <a href="#" class="secondary_sub_menu">iPad</a>
-                <a href="#" class="secondary_sub_menu">iPhone</a>
-                <a href="#" class="secondary_sub_menu">Watch</a>
-                <a href="#" class="secondary_sub_menu">AirPods</a>
-                <a href="#" class="secondary_sub_menu">TV & Home</a>
-                <a href="#" class="secondary_sub_menu">AirTag</a>
-                <a href="#" class="secondary_sub_menu">Accessories</a>
-                <a href="#" class="secondary_sub_menu">Gift Cards</a>
+        <!-- Desktop Footer Nav -->
 
-                <a href="#" class="main_menu">Apple Wallet</a>
-                <a href="#" class="secondary_sub_menu">Apple Card</a>
-                <a href="#" class="secondary_sub_menu">Apple Pay</a>
-                <a href="#" class="secondary_sub_menu">Apple Cash</a>
+        <nav class="desk__footer__nav">
+            <div class="desk__footer__nav__col">
+                <a href="#" class="desk__footer__nav__main">Shop and Learn</a>
+                <a href="#" class="desk__footer__nav__sec">Store</a>
+                <a href="#" class="desk__footer__nav__sec">Mac</a>
+                <a href="#" class="desk__footer__nav__sec">iPad</a>
+                <a href="#" class="desk__footer__nav__sec">iPhone</a>
+                <a href="#" class="desk__footer__nav__sec">Watch</a>
+                <a href="#" class="desk__footer__nav__sec">AirPods</a>
+                <a href="#" class="desk__footer__nav__sec">TV & Home</a>
+                <a href="#" class="desk__footer__nav__sec">AirTag</a>
+                <a href="#" class="desk__footer__nav__sec">Accessories</a>
+                <a href="#" class="desk__footer__nav__sec">Gift Cards</a>
+
+                <a href="#" class="desk__footer__nav__main">Apple Wallet</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Card</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Pay</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Cash</a>
             </div>
-            <div>
-                <a href="#" class="main_menu">Account</a>
-                <a href="#" class="secondary_sub_menu">Manage Your Apple ID</a>
-                <a href="#" class="secondary_sub_menu">Apple Store Account</a>
-                <a href="#" class="secondary_sub_menu">iCloud.com</a>
-                <a href="#" class="main_menu">Entertainment</a>
-                <a href="#" class="secondary_sub_menu">Apple One</a>
-                <a href="#" class="secondary_sub_menu">Apple Tv+</a>
-                <a href="#" class="secondary_sub_menu">Apple Music</a>
-                <a href="#" class="secondary_sub_menu">Apple Arcade</a>
-                <a href="#" class="secondary_sub_menu">Apple Fitness+</a>
-                <a href="#" class="secondary_sub_menu">Apple News+</a>
-                <a href="#" class="secondary_sub_menu">Apple Podcasts</a>
-                <a href="#" class="secondary_sub_menu">Apple Books</a>
-                <a href="#" class="secondary_sub_menu">Apple Store</a>
+            <div class="desk__footer__nav__col">
+                <a href="#" class="desk__footer__nav__main">Account</a>
+                <a href="#" class="desk__footer__nav__sec">Manage Your Apple ID</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Store Account</a>
+                <a href="#" class="desk__footer__nav__sec">iCloud.com</a>
+                <a href="#" class="desk__footer__nav__main">Entertainment</a>
+                <a href="#" class="desk__footer__nav__sec">Apple One</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Tv+</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Music</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Arcade</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Fitness+</a>
+                <a href="#" class="desk__footer__nav__sec">Apple News+</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Podcasts</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Books</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Store</a>
             </div>
-            <div>
-                <a href="#" class="main_menu">Apple Store</a>
-                <a href="#" class="secondary_sub_menu">Find a Store</a>
-                <a href="#" class="secondary_sub_menu">Genius Bar</a>
-                <a href="#" class="secondary_sub_menu">Today at Apple</a>
-                <a href="#" class="secondary_sub_menu">Apple Camp</a>
-                <a href="#" class="secondary_sub_menu">Apple Store App</a>
-                <a href="#" class="secondary_sub_menu">Certified Refurbished</a>
-                <a href="#" class="secondary_sub_menu">Apple Trade In</a>
-                <a href="#" class="secondary_sub_menu">Financing</a>
-                <a href="#" class="secondary_sub_menu">Carrier Deals at Apple</a>
-                <a href="#" class="secondary_sub_menu">Order Status</a>
-                <a href="#" class="secondary_sub_menu">Shopping Help</a>
+            <div class="desk__footer__nav__col">
+                <a href="#" class="desk__footer__nav__main">Apple Store</a>
+                <a href="#" class="desk__footer__nav__sec">Find a Store</a>
+                <a href="#" class="desk__footer__nav__sec">Genius Bar</a>
+                <a href="#" class="desk__footer__nav__sec">Today at Apple</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Camp</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Store App</a>
+                <a href="#" class="desk__footer__nav__sec">Certified Refurbished</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Trade In</a>
+                <a href="#" class="desk__footer__nav__sec">Financing</a>
+                <a href="#" class="desk__footer__nav__sec">Carrier Deals at Apple</a>
+                <a href="#" class="desk__footer__nav__sec">Order Status</a>
+                <a href="#" class="desk__footer__nav__sec">Shopping Help</a>
             </div>
-            <div>
-                <a href="#" class="main_menu">For Business</a>
-                <a href="#" class="secondary_sub_menu">Apple and Business</a>
-                <a href="#" class="secondary_sub_menu">Shop for Business</a>
-                <a href="#" class="main_menu">For Education</a>
-                <a href="#" class="secondary_sub_menu">Apple and Education</a>
-                <a href="#" class="secondary_sub_menu">Shop for K-12</a>
-                <a href="#" class="secondary_sub_menu">AShop for College</a>
-                <a href="#" class="main_menu">For Healthcare</a>
-                <a href="#" class="secondary_sub_menu">Apple in Healthcare</a>
-                <a href="#" class="secondary_sub_menu">Health on Apple Watch</a>
-                <a href="#" class="secondary_sub_menu">Health records on iPhone</a>
-                <a href="#" class="main_menu">For Government</a>
-                <a href="#" class="secondary_sub_menu">Shop for Government</a>
-                <a href="#" class="secondary_sub_menu">Shop for Veterans and Military</a>
+            <div class="desk__footer__nav__col">
+                <a href="#" class="desk__footer__nav__main">For Business</a>
+                <a href="#" class="desk__footer__nav__sec">Apple and Business</a>
+                <a href="#" class="desk__footer__nav__sec">Shop for Business</a>
+                <a href="#" class="desk__footer__nav__main">For Education</a>
+                <a href="#" class="desk__footer__nav__sec">Apple and Education</a>
+                <a href="#" class="desk__footer__nav__sec">Shop for K-12</a>
+                <a href="#" class="desk__footer__nav__sec">AShop for College</a>
+                <a href="#" class="desk__footer__nav__main">For Healthcare</a>
+                <a href="#" class="desk__footer__nav__sec">Apple in Healthcare</a>
+                <a href="#" class="desk__footer__nav__sec">Health on Apple Watch</a>
+                <a href="#" class="desk__footer__nav__sec">Health records on iPhone</a>
+                <a href="#" class="desk__footer__nav__main">For Government</a>
+                <a href="#" class="desk__footer__nav__sec">Shop for Government</a>
+                <a href="#" class="desk__footer__nav__sec">Shop for Veterans and Military</a>
             </div>
-            <div>
-                <a href="#" class="main_menu">Apple Values</a>
-                <a href="#" class="secondary_sub_menu">Accessibility</a>
-                <a href="#" class="secondary_sub_menu">Education</a>
-                <a href="#" class="secondary_sub_menu">Environment</a>
-                <a href="#" class="secondary_sub_menu">Inclusion and Diversity</a>
-                <a href="#" class="secondary_sub_menu">Privacy</a>
-                <a href="#" class="secondary_sub_menu">Racial Equity and Justice</a>
-                <a href="#" class="secondary_sub_menu">Supplier Responsibility</a>
-                <a href="#" class="main_menu">About Apple</a>
-                <a href="#" class="secondary_sub_menu">Newsroom</a>
-                <a href="#" class="secondary_sub_menu">Apple Leadership</a>
-                <a href="#" class="secondary_sub_menu">Career Opportunities</a>
-                <a href="#" class="secondary_sub_menu">Investors</a>
-                <a href="#" class="secondary_sub_menu">Ethics & Compliance</a>
-                <a href="#" class="secondary_sub_menu">Events</a>
-                <a href="#" class="secondary_sub_menu">Contact Apple</a>
+            <div class="desk__footer__nav__col">
+                <a href="#" class="desk__footer__nav__main">Apple Values</a>
+                <a href="#" class="desk__footer__nav__sec">Accessibility</a>
+                <a href="#" class="desk__footer__nav__sec">Education</a>
+                <a href="#" class="desk__footer__nav__sec">Environment</a>
+                <a href="#" class="desk__footer__nav__sec">Inclusion and Diversity</a>
+                <a href="#" class="desk__footer__nav__sec">Privacy</a>
+                <a href="#" class="desk__footer__nav__sec">Racial Equity and Justice</a>
+                <a href="#" class="desk__footer__nav__sec">Supplier Responsibility</a>
+                <a href="#" class="desk__footer__nav__main">About Apple</a>
+                <a href="#" class="desk__footer__nav__sec">Newsroom</a>
+                <a href="#" class="desk__footer__nav__sec">Apple Leadership</a>
+                <a href="#" class="desk__footer__nav__sec">Career Opportunities</a>
+                <a href="#" class="desk__footer__nav__sec">Investors</a>
+                <a href="#" class="desk__footer__nav__sec">Ethics & Compliance</a>
+                <a href="#" class="desk__footer__nav__sec">Events</a>
+                <a href="#" class="desk__footer__nav__sec">Contact Apple</a>
             </div>
         </nav>
 
-        <!-- Footer Last Section -->
-        <section class="last_footer">
+        <!-- Bottom Footer -->
+        <section class="bottom__footer">
             <ul>
-                <li>
-                    More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you.
+                <li class="bottom__footer__item">
+                    More ways to shop: <a class="bottom__footer__link" href="#">Find an Apple Store</a> or <a
+                        class="bottom__footer__link" href="#">other retailer</a> near you.
                     Or call 1-800-MY-APPLE.
                 </li>
-                <li>
+                <li class="bottom__footer__item">
                     United States
                 </li>
-                <li class="last">
-                    Copyright © 2023 Apple Inc. All rights reserved.
+                <li class="bottom__footer__item bottom__footer__item--last">
+                    Copyright &copy; 2023 Apple Inc. All rights reserved.
                 </li>
             </ul>
-            <ul>
-                <li>Privacy Policy</li>
-                <li>Terms of Use</li>
-                <li>Sales and Refunds</li>
-                <li>Legal</li>
-                <li class="last">Site Map</li>
+            <ul class="bottom__footer__legal">
+                <li class="bottom__footer__item bottom__footer__item--legal">Privacy Policy</li>
+                <li class="bottom__footer__item bottom__footer__item--legal">Terms of Use</li>
+                <li class="bottom__footer__item bottom__footer__item--legal">Sales and Refunds</li>
+                <li class="bottom__footer__item bottom__footer__item--legal">Legal</li>
+                <li class="bottom__footer__item bottom__footer__item--legal bottom__footer__item--legal__last">Site Map
+                </li>
             </ul>
         </section>
 
     </footer>
-    <!-- End Footer -->
+
 </body>
 
 </html>
