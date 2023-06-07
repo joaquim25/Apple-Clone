@@ -2,7 +2,7 @@
 This is a clone of the Apple website created using only HTML and CSS. The goal of this project is to replicate the user interface and basic functionality of the Apple website. The project was developed to enhance my HTML and CSS skills and gain a deeper understanding of web development techniques.
 
 ## Live Demo
-Check out the live demo of the Apple website clone: [Apple Clone Demo](https://joaquim25.github.io/Apple-Clone/).
+Check out the live demo of the Apple website clone: [Apple Clone Demo](https://joaquim25.github.io/apple-clone-project/).
 > Note: Due to the nature of this project being an Apple website clone, some web browsers may issue a phishing warning. Please ensure you are accessing the demo from a trusted source and exercise caution while interacting with the website.
 
 ## Features
