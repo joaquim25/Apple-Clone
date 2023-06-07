@@ -129,6 +129,7 @@ a:hover {
 
     .navbar__desktop__link:hover {
         color: rgb(232, 232, 232);
+        text-decoration: none;
     }
 
     .navbar__icon {
