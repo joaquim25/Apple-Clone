@@ -1,7 +1,6 @@
 :root {
     --primary-white: rgb(245, 245, 247);
     --primary-link: rgb(41, 151, 255);
-    --primary-text-color: rgb(29, 29, 31);
     --dark-grey: rgb(110, 110, 115);
     --light-grey: rgb(162, 162, 166);
 }
@@ -16,6 +15,7 @@ body {
     font-family: "SanFranciscoText-Regular", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow-x: hidden;
 }
+
 
 /* Utilities */
 sup {
@@ -51,8 +51,8 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Navbar */
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -137,8 +137,8 @@ a:hover {
     }
 }
 
-/* Hamburguer menu */
 
+/* Hamburguer menu */
 #hamb__button {
     display: none;
 }
@@ -217,8 +217,8 @@ a:hover {
     overflow: none;
 }
 
-/* Announcement Section */
 
+/* Announcement Section */
 .announcement {
     margin-top: 48px;
 }
@@ -240,8 +240,8 @@ a:hover {
     }
 }
 
-/* Hero Section */
 
+/* Hero Section */
 .hero {
     cursor: pointer;
     height: 350px;
@@ -329,8 +329,8 @@ a:hover {
     }
 }
 
-/* Section iPhone14 Black & White styles */
 
+/* Section iPhone14 Black & White styles */
 .iphone14 {
     cursor: pointer;
     height: 500px;
@@ -410,8 +410,8 @@ a:hover {
     }
 }
 
-/* Section Gallery */
 
+/* Section Gallery */
 .gallery {
     display: flex;
     flex-direction: column;
@@ -480,10 +480,12 @@ a:hover {
     }
 }
 
+
 /* Card1 */
 .gallery__card--card1 {
     background-image: url(https://www.apple.com/v/home/ba/images/promos/iphone-tradein/iphone_tradein_promo__d5au3rkw5kuq_small_2x.jpg);
 }
+
 
 /* Card2 */
 .gallery__card--card2 {
@@ -510,6 +512,7 @@ a:hover {
     margin: 9px 0 30px 0;
 }
 
+
 /* Card3 */
 .gallery__card--card3 {
     background-image: url(https://www.apple.com/v/home/ba/images/promos/apple-watch-pride/promo_pride23__cnpic94fthle_small_2x.jpg);
@@ -528,8 +531,8 @@ a:hover {
     margin: 0 auto;
 }
 
-/* Card4 */
 
+/* Card4 */
 .gallery__card--card4 {
     background-image: url(https://www.apple.com/v/home/ba/images/promos/ipad-pro/promo_ipadpro__ch217v9v7no2_small_2x.jpg);
     display: flex;
@@ -564,8 +567,8 @@ a:hover {
     margin-left: 4px;
 }
 
-/* Card5 */
 
+/* Card5 */
 .gallery__card--card5 {
     background-image: url(https://www.apple.com/v/home/ba/images/promos/privacy/privacy__fzwalkil8paq_small_2x.jpg);
     display: flex;
@@ -589,8 +592,8 @@ a:hover {
     color: var(--primary-white);
 }
 
-/* Card6 */
 
+/* Card6 */
 .gallery__card--card6 {
     background-image: url(https://www.apple.com/v/home/ba/images/promos/apple-card/tile__cauwwcyyn9hy_small_2x.jpg);
     display: flex;
@@ -610,8 +613,8 @@ a:hover {
     font-weight: 400;
 }
 
-/* Cards responsive */
 
+/* Cards responsive */
 @media (min-width: 1069px) {
     .gallery__card__head {
         font-size: 40px;
@@ -647,8 +650,8 @@ a:hover {
     }
 }
 
-/* Footer styles */
 
+/* Footer styles */
 .footer {
     background-color: var(--primary-white);
     padding: 0 16px;
@@ -671,8 +674,8 @@ a:hover {
     color: var(--dark-grey);
 }
 
-/* Mobile Nav-Footer styles */
 
+/* Mobile Nav-Footer styles */
 .mob__footer__nav {
     position: relative;
     display: flex;
@@ -760,8 +763,8 @@ a:hover {
         display: none;
     }
 
-    /* Desktop Nav-Footer Styles */
 
+    /* Desktop Nav-Footer Styles */
     .desk__footer__nav {
         border-top: 1px solid var(--light-grey);
         position: relative;
@@ -803,8 +806,6 @@ a:hover {
 
 
 /* Bottom footer section */
-
-
 .bottom__footer {
     max-width: 1000px;
     margin: 0 auto;
